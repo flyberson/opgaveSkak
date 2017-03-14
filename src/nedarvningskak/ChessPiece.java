@@ -34,7 +34,7 @@ public abstract class ChessPiece {
     
     public String positionToField(int x,int y){
         char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-        char temp = alphabet[x];
+        char temp = alphabet[x-1];
         
         return "Move="+temp+y;
     }
