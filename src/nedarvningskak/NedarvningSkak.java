@@ -22,15 +22,13 @@ public class NedarvningSkak {
         Bishop bishop = new Bishop(true, 3, 7);
 
         Knight knight = new Knight(true, 4, 4);
-        knight.show();
-        rook.show();
-        bishop.show();
+
         
         alist.add(rook);
         alist.add(bishop);
         alist.add(knight);
         for (ChessPiece cp : alist) {
-            cp.show();
+            System.out.println(cp.show());
         }
 //        alist.get(0).move(4, 2);
 //        alist.get(1).move(8, 1);
