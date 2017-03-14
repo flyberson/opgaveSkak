@@ -22,6 +22,10 @@ public class NedarvningSkak {
         Bishop bishop = new Bishop(true, 3, 7);
 
         Knight knight = new Knight(true, 4, 4);
+        knight.show();
+        rook.show();
+        bishop.show();
+        
         alist.add(rook);
         alist.add(bishop);
         alist.add(knight);
