@@ -34,8 +34,9 @@ public abstract class ChessPiece {
     
     public String positionToField(int x,int y){
         char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-        x= alphabet[x];
-        return "Square="+x+y;
+        char temp = alphabet[x];
+        
+        return "Square="+temp+y;
     }
     
     public String possibleMoves(){
@@ -52,8 +53,8 @@ public abstract class ChessPiece {
    
     public String show(){
         
-        return "Name="+name+" "+color+"  "+xposition+"  "+yposition+" Position="+positionToField(xposition, yposition)+
-                "\n Can Move to: "+ possibleMoves();
+        return "Name="+name+" "+color+"  "+xposition+"  "+yposition+" "+positionToField(xposition, yposition)+
+                "\n Can Move to: ";//+ possibleMoves();
         
     }
     
