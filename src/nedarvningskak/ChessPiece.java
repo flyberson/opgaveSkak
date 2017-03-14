@@ -36,14 +36,16 @@ public abstract class ChessPiece {
         char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
         char temp = alphabet[x];
         
-        return "Square="+temp+y;
+        return "Move="+temp+y;
     }
     
+    
+    // need to fix
     public String possibleMoves(){
             for (int i = 0; i < 10; i++) {
                 for (int j = 0; j < 10; j++) {
                    if( canMoveTo(i,j)){
-                       System.out.println(i+j);
+                       System.out.println(positionToField(i, j));
                    }
                 }
         }
@@ -54,7 +56,7 @@ public abstract class ChessPiece {
     public String show(){
         
         return "Name="+name+" "+color+"  "+xposition+"  "+yposition+" "+positionToField(xposition, yposition)+
-                "\n Can Move to: ";//+ possibleMoves();
+                "\n Can Move to: "+ possibleMoves();
         
     }
     
